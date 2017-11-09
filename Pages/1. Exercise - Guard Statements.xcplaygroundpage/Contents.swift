@@ -65,13 +65,7 @@ lastNameTextField.text = "Sanders"
 ageTextField.text = "28"
 
 func createUser() -> User? {
-    guard let firstName = firstNameTextField.text else {
-        return nil
-    }
-    guard let lastName = lastNameTextField.text else {
-        return nil
-    }
-    guard let age = ageTextField.text else {
+    guard let firstName = firstNameTextField.text, let lastName = lastNameTextField.text, let age = ageTextField.text else {
         return nil
     }
     

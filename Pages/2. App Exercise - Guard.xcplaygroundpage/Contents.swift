@@ -45,13 +45,10 @@ caloriesTextField.text = "23"
 
 func logFood() -> Food? {
     
-    guard let name = foodTextField.text else {
+    guard let name = foodTextField.text, let calories =  caloriesTextField.text else {
         return nil
     }
     
-    guard let calories =  caloriesTextField.text else {
-        return nil
-    }
     
     guard let caloriesNum = Int(calories) else {
         return nil
